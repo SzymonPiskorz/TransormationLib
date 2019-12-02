@@ -4,8 +4,7 @@
 #include <cmath>
 #include <string>
 
-namespace cube
-{
+
 	class Vector3
 	{
 	public:
@@ -46,5 +45,5 @@ namespace cube
 		std::string toString() const;
 
 	};
-}
+
 

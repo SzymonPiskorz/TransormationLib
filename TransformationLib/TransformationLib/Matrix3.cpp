@@ -1,8 +1,5 @@
 #include "Matrix3.h"
 
-namespace cube
-{
-
 	// Constructor 1 create a zero matrix
 	Matrix3::Matrix3()
 	{
@@ -239,7 +236,9 @@ namespace cube
 
 	Matrix3 Matrix3::operator -() const
 	{
-		Matrix3 answer;
+		Matrix3 answer(A11, A21, A31,
+			A12, A22, A32,
+			A13, A23, A33);
 
 		return answer * (-1.0);
 	}
@@ -309,4 +308,11 @@ namespace cube
 		return answer;
 	}
 
-}
+	//return the given matrix as a string
+	std::string Matrix3::toString() const
+	{
+		std::string matrix = "( " + std::to_string(A11) + ", " + std::to_string(A12) + ", " + std::to_string(A13) + " ) \n"
+			"( " + std::to_string(A21) + ", " + std::to_string(A22) + ", " + std::to_string(A23) + " ) \n"
+			"( " + std::to_string(A31) + ", " + std::to_string(A32) + ", " + std::to_string(A33) + " ]";
+		return matrix;
+	}

@@ -1,7 +1,6 @@
 #include "Vector3.h"
 
-namespace cube
-{
+
 	// Constructor 1
 	Vector3::Vector3()
 	{
@@ -17,6 +16,7 @@ namespace cube
 		y = y1;
 		z = z1;
 	}
+
 	// Constructor 3
 	Vector3::Vector3(Vector3& V)
 	{  // To allow other values for X, Y and Z to be declared
@@ -87,7 +87,5 @@ namespace cube
 
 	std::string Vector3::toString() const
 	{
-		return "(" + std::to_string(x) + "," + std::to_string(y) + "," + std::to_string(y) + ")";
+		return "(" + std::to_string(x) + "," + std::to_string(y) + "," + std::to_string(z) + ")";
 	}
-
-};

@@ -5,8 +5,7 @@
 
 const double PI = 3.14159265359;
 
-namespace cube
-{
+
 	class Matrix3
 	{// The class has nine variables, 3 rows and 3 columns
 	public:
@@ -63,8 +62,10 @@ namespace cube
 		Matrix3 RotationZ(int _angle) const;
 
 		Matrix3 Scale3D(int dx) const;
+
+		std::string toString() const;
 	};
-}
+
 
 
 
