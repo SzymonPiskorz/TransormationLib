@@ -5,7 +5,6 @@
 
 const double PI = 3.14159265359;
 
-
 	class Matrix3
 	{// The class has nine variables, 3 rows and 3 columns
 	public:

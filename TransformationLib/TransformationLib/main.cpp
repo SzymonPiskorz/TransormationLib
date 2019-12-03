@@ -191,9 +191,12 @@ int main()
 
 	//determinant
 	matrixA = { vectorA, vectorB, vectorC };
+	matrixB = { 6, 5 ,4, 3, 5, 1, 9, 8, 7 };
 	
 	std::cout << "Expected ans 0" << std::endl;
 	std::cout << (matrixA.Determinant(matrixA)) << std::endl;
+	std::cout << "Expected ans 18" << std::endl;
+	std::cout << (matrixB.Determinant(matrixB)) << std::endl;
 	
 	//row
 
@@ -210,10 +213,15 @@ int main()
 	std::cout << (matrixA.Column(1)).toString() << std::endl;
 
 	//inverse
+	matrixB = { 6, 5 ,4, 3, 5, 1, 9, 8, 7 };
+
 
 	matrixA = { vectorA, vectorB, vectorC };
 	std::cout << "Expected ans (0, 0, 0) \n\t     (0, 0, 0)\n\t     (0, 0, 0)" << std::endl;
 	std::cout << (matrixA.Inverse(matrixA)).toString() << std::endl;
+
+	std::cout << "Expected ans (1.5, -0.166, -0.833) \n\t     (-0.66, 0.33, 0.33)\n\t     (-1.166, -0.166, 0.833)" << std::endl;
+	std::cout << (matrixB.Inverse(matrixB)).toString() << std::endl;
 
 	//rotation
 	matrixA = { vectorA, vectorB, vectorC };
@@ -256,6 +264,42 @@ int main()
 	std::cout << "Expected ans ( 1, 0, 0) \n\t     ( 0, 1, 0)\n\t     (0, 0, 1)" << std::endl;
 	std::cout << (matrixA.Scale3D(100)).toString() << std::endl;
 
+
+	/////////////////////////////////////////////////////////
+
+	/////////////////////////////////////////////////////////
+	 
+	
+
+
+	Vector3 test1(0, 2, -5);
+	Vector3 test2(-2, -2, -5);
+	Vector3 test3(2, -2, -5);
+
+	/// <summary>
+	/// lenght test1
+	/// </summary>
+	/// lenght squar test2
+	/// <summary>
+	/// matrix z rotation 23.21
+	/// </summary>
+	/// quat 
+	/// <returns></returns>
+
+	std::cout << "Phil tests" << std::endl;
+
+	//Lenght
+	std::cout << "test1 lenght " << std::endl;
+	std::cout << test1.Length() << std::endl;
+
+	//Lenght Squared
+	std::cout << "test2 lenght squared" << std::endl;
+	std::cout << test2.LengthSquared() << std::endl;
+
+
+	//matrix z rotation
+	std::cout << "test3 matrix 3 rotated by 23.21" << std::endl;
+	std::cout << (matrixA.RotationZ(23.21)* test3).toString() << std::endl;
 
 	/////////////////////////////////////////////////////////
 

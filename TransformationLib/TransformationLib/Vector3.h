@@ -18,8 +18,7 @@
 
 		// Constructor 2
 		Vector3(double x1, double y1, double z1);
-		// Constructor 3
-		Vector3(Vector3& V);
+
 
 		double Length() const;
 		double LengthSquared() const;

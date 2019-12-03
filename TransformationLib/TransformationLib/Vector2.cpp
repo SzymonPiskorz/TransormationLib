@@ -46,12 +46,12 @@ void Vector2::Normalise()
 
 Vector2 Vector2::operator+(Vector2 V2) const
 {  // An overloaded operator + to return the sum of 2 vectors
-	return { x + V2.x, y + V2.y};
+	return { x + V2.x, y + V2.y };
 }
 
 Vector2 Vector2::operator-(Vector2 V2) const
 { // An overloaded operator - to return the difference of 2 vectors
-	return { x - V2.x, y - V2.y};
+	return { x - V2.x, y - V2.y };
 }
 
 
@@ -62,17 +62,17 @@ double Vector2::operator*(Vector2 V2) const
 
 Vector2 Vector2::operator*(double k) const
 {// An overloaded operator * to return the product of a scalar by a vector
-	return { x * (float)k, y * (float)k};
+	return { x * (float)k, y * (float)k };
 }
 
 Vector2 Vector2::operator*(float k) const
 {// An overloaded operator * to return the product of a scalar by a vector
-	return { x * k, y * k};
+	return { x * k, y * k };
 }
 
 Vector2 Vector2::operator *(int k) const
 {// An overloaded operator * to return the product of a scalar by a vector
-	return { x * k, y * k};
+	return { x * k, y * k };
 }
 
 Vector2 Vector2::operator^(Vector2 V2) const

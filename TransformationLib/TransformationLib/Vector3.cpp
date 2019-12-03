@@ -17,14 +17,6 @@
 		z = z1;
 	}
 
-	// Constructor 3
-	Vector3::Vector3(Vector3& V)
-	{  // To allow other values for X, Y and Z to be declared
-		x = V.x;
-		y = V.y;
-		z = V.z;
-	}
-
 	double Vector3::Length() const
 	{  // A method to return the length of the vector
 		return (double)sqrt(x * x + y * y + z * z);

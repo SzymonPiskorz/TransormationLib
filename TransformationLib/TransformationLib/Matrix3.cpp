@@ -82,7 +82,7 @@
 
 		answer.A31 = A31 * x;
 		answer.A32 = A32 * x;
-		answer.A33 = A33 * x; ;
+		answer.A33 = A33 * x;
 
 		return answer;
 	}
@@ -91,29 +91,18 @@
 	{// An overloaded operator * to return the  product of two matrix
 		Matrix3 answer;
 
-		Vector3 col;
+		answer.A11 = Row(0) * M2.Column(0);
+		answer.A12 = Row(0) * M2.Column(1);
+		answer.A13 = Row(0) * M2.Column(2);
 
-		col = M2.Column(0);
-		answer.A11 = Row(0) * col;
-		col = M2.Column(1);
-		answer.A12 = Row(0) * col;
-		col = M2.Column(2);
-		answer.A13 = Row(0) * col;
-
-		col = M2.Column(0);
-		answer.A21 = Row(1) * col;
-		col = M2.Column(1);
-		answer.A22 = Row(1) * col;
-		col = M2.Column(2);
-		answer.A23 = Row(1) * col;
+		answer.A21 = Row(1) * M2.Column(0);
+		answer.A22 = Row(1) * M2.Column(1);
+		answer.A23 = Row(1) * M2.Column(2);
 		
 
-		col = M2.Column(0);
-		answer.A31 = Row(2) * col;
-		col = M2.Column(1);
-		answer.A32 = Row(2) * col;
-		col = M2.Column(2);
-		answer.A33 = Row(2) * col;
+		answer.A31 = Row(2) * M2.Column(0);
+		answer.A32 = Row(2) * M2.Column(1);
+		answer.A33 = Row(2) * M2.Column(2);
 
 
 		return answer;
@@ -275,7 +264,7 @@
 
 		return answer;
 	}
-	Matrix3 Matrix3::RotationZ(int _angle) const
+	 Matrix3 Matrix3::RotationZ(int _angle) const
 	{
 		double radians = PI / 180 * _angle;
 		Matrix3 answer;
